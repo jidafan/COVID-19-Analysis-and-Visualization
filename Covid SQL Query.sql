@@ -99,10 +99,10 @@ Group by Location, Population
 
 
 --Showing Countries with Highest Death Count compared to Population
-Select Location, MAX(cast(total_deaths as bigint)) as TotalDeathCount
+Select Location, population, MAX(cast(total_deaths as bigint)) as TotalDeathCount
 From [Portfolio Project]..CovidDeaths
 Where continent is not NULL
-Group by Location
+Group by Location, population
 order by TotalDeathCount desc
 
 -- Show continents with highest death count
