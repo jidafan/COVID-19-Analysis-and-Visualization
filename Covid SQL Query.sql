@@ -7,6 +7,7 @@ Order by Location, date
 -- Viewing Covid Vaccination Data
 Select *
 From [Portfolio Project]..CovidVaccinations
+Where continent is not NULL
 Order by Location, date
 
 -- Select Data that will be used
