@@ -119,16 +119,19 @@ order by TotalDeathCount desc
 -- Looking at the global death rate and cases
 Select date, sum(new_cases) as total_cases, sum(cast(new_deaths as int)) as total_deaths, sum(cast(new_deaths as float))/sum(NULLIF(CONVERT(float, new_cases), 0))*100 as DeathPercentage
 From [Portfolio Project]..CovidDeaths
+-- Where location like '%canada%'
 where continent is not null
 Group By date
-Order by 1,2
+Order by date, total_cases
 
 -- Looking at total global death rate and cases
 Select sum(new_cases) as total_cases, sum(cast(new_deaths as int)) as total_deaths, sum(cast(new_deaths as float))/sum(NULLIF(CONVERT(float, new_cases), 0))*100 as DeathPercentage
 From [Portfolio Project]..CovidDeaths
+-- Where location like '%canada%'
 where continent is not null
 -- Group By date
-Order by 1,2
+Order by total_cases, total_deaths
+
 
 --Looking at the relationship between total population and vaccination rates
 -- Looking at global rolling vaccination 
