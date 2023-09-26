@@ -108,8 +108,9 @@ order by TotalDeathCount desc
 -- Show continents with highest death count
 Select location, MAX(cast(total_deaths as bigint)) as TotalDeathCount
 From [Portfolio Project]..CovidDeaths
--- Where location like '%canada%'
-Where continent is NULL
+Where continent is NULL 
+AND location NOT LIKE '%union%'
+AND location NOT LIKE '%world%'
 Group by location
 order by TotalDeathCount desc
 
@@ -118,7 +119,6 @@ order by TotalDeathCount desc
 -- Looking at the global death rate and cases
 Select date, sum(new_cases) as total_cases, sum(cast(new_deaths as int)) as total_deaths, sum(cast(new_deaths as float))/sum(NULLIF(CONVERT(float, new_cases), 0))*100 as DeathPercentage
 From [Portfolio Project]..CovidDeaths
--- Where location like '%canada%'
 where continent is not null
 Group By date
 Order by 1,2
@@ -126,7 +126,6 @@ Order by 1,2
 -- Looking at total global death rate and cases
 Select sum(new_cases) as total_cases, sum(cast(new_deaths as int)) as total_deaths, sum(cast(new_deaths as float))/sum(NULLIF(CONVERT(float, new_cases), 0))*100 as DeathPercentage
 From [Portfolio Project]..CovidDeaths
--- Where location like '%canada%'
 where continent is not null
 -- Group By date
 Order by 1,2
