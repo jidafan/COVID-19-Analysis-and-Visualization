@@ -10,11 +10,11 @@ From [Portfolio Project]..CovidVaccinations
 Where continent is not NULL
 Order by Location, date
 
--- Select Data that will be used
-
+-- Looking at Cases and Total Deaths in each country
+	
 Select location, date, total_cases, new_cases, total_deaths, population
 From [Portfolio Project]..CovidDeaths
-Order by 3,4
+Order by location, date
 
 -- Looking at Total Cases vs Total Deaths
 -- Shows likelihood of dying if you contract covid in Canada
