@@ -294,6 +294,7 @@ where dea.continent is not null
 ## Tableau Dashboard
 To view the tableau dashboard for this project, [click here](https://public.tableau.com/app/profile/scott.duong8287/viz/CovidTracking_16999254003760/CovidDashboard#1).
 
-![image](https://github.com/jidafan/COVID-19-Analysis-and-Visualization/assets/141703009/63861290-ac3c-40f5-8666-3c745a833bc1)
+![image](https://github.com/jidafan/COVID-19-Analysis-and-Visualization/assets/141703009/e97ce007-ca6f-4283-934d-4187d3d19549)
+
 
 
