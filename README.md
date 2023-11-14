@@ -292,5 +292,5 @@ Join [Portfolio Project]..CovidVaccinations vac
 where dea.continent is not null
 ```
 ## Tableau Dashboard
-To view the tableau dashboard for this project, [click here](https://public.tableau.com/app/profile/scott.duong8287/viz/COVID19Dashboard_16955988107200/Dashboard1).
+To view the tableau dashboard for this project, [click here](https://public.tableau.com/app/profile/scott.duong8287/viz/CovidTracking_16999254003760/CovidDashboard#1).
 ![image](https://github.com/jidafan/Covid19-Dashboard/assets/141703009/075d62dc-e75f-4849-a628-3ad7e4191fd0)
